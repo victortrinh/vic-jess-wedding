@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "@sharegate/eslint-config-recommended",
+    "@sharegate/eslint-config-typescript",
+    "@sharegate/eslint-config-nextjs"
+  ],
+  "rules": {
+    "@typescript-eslint/indent": ["error", 2],
+    "react/jsx-filename-extension": "off",
+    "@typescript-eslint/no-implicit-any-catch": "off",
+    "react/jsx-one-expression-per-line": "error",
+    "react/jsx-indent": [ "error", 2]
+  }
 }
