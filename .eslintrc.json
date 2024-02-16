@@ -1,9 +1,8 @@
 {
+  "$schema": "https://json.schemastore.org/eslintrc",
   "extends": [
     "next/core-web-vitals",
-    "@sharegate/eslint-config-recommended",
-    "@sharegate/eslint-config-typescript",
-    "@sharegate/eslint-config-nextjs"
+    "plugin:@workleap/web-application"
   ],
   "rules": {
     "@typescript-eslint/indent": ["error", 2],

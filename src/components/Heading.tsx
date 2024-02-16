@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Merriweather } from "next/font/google";
 import localFont from "next/font/local";
 import classNames from "classnames";
