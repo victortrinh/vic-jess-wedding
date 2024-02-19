@@ -21,13 +21,13 @@ export const Hero = () => {
           </SmallText>
 
           <div className="flex flex-col items-center justify-center">
-            <H1 className={textClasses}>
+            <H1 className={`${textClasses} tracking-[6px]`}>
               Victor Trinh
             </H1>
             <H1 className={`${textClasses} mt-[-12px] lg:mt-[-32px]`} variant="bacalisties">
               and
             </H1>
-            <H1 className={`${textClasses} mt-[-2px] lg:mt-[-10px]`}>
+            <H1 className={`${textClasses} mt-[-2px] lg:mt-[-10px] tracking-[6px]`}>
               Jessica Li
             </H1>
           </div>
