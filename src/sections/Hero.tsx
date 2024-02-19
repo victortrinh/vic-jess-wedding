@@ -20,7 +20,19 @@ export const Hero = () => {
             SAVE THE DATE
           </SmallText>
 
-          <div className="flex gap-2 md:gap-4 lg:gap-6 items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <H1 className={textClasses}>
+              Victor Trinh
+            </H1>
+            <H1 className={`${textClasses} mt-[-32px]`} variant="bacalisties">
+              and
+            </H1>
+            <H1 className={`${textClasses} mt-[-10px]`}>
+              Jessica Li
+            </H1>
+          </div>
+
+          {/* <div className="flex gap-2 md:gap-4 lg:gap-6 items-center justify-center">
             <H1 className={textClasses}>
               Victor
             </H1>
@@ -30,6 +42,12 @@ export const Hero = () => {
             <H1 className={textClasses}>
               Jessica
             </H1>
+          </div> */}
+
+          <div className="flex flex-col gap-2 items-center justify-center">
+            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
+              October 13, 2024
+            </SmallText>
           </div>
 
           <add-to-calendar-button
@@ -46,18 +64,6 @@ export const Hero = () => {
             hideCheckmark
             size="4"
           />
-
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
-              October 13, 2024
-            </SmallText>
-            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
-              RYE CROWN ROYAL
-            </SmallText>
-            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
-              MONTREAL, QC
-            </SmallText>
-          </div>
 
           <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px]">
             formal invitation to follow
