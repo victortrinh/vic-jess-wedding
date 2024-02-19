@@ -24,10 +24,10 @@ export const Hero = () => {
             <H1 className={textClasses}>
               Victor Trinh
             </H1>
-            <H1 className={`${textClasses} mt-[-32px]`} variant="bacalisties">
+            <H1 className={`${textClasses} mt-[-12px] lg:mt-[-32px]`} variant="bacalisties">
               and
             </H1>
-            <H1 className={`${textClasses} mt-[-10px]`}>
+            <H1 className={`${textClasses} mt-[-2px] lg:mt-[-10px]`}>
               Jessica Li
             </H1>
           </div>
@@ -45,7 +45,7 @@ export const Hero = () => {
           </div> */}
 
           <div className="flex flex-col gap-2 items-center justify-center">
-            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
+            <SmallText>
               October 13, 2024
             </SmallText>
           </div>
@@ -88,7 +88,7 @@ interface Props extends PropsWithChildren {
 }
 
 const SmallText = ({ children, className }: Props) => (
-  <p className={classNames("uppercase text-white text-[20px] md:text-[25px] lg:text-[30px] tracking-[12px]", className)}>
+  <p className={classNames("uppercase text-white text-[16px] lg:text-[20px] tracking-[8px] lg:tracking-[10px]", className)}>
     {children}
   </p>
 );
