@@ -65,7 +65,7 @@ export const Hero = () => {
             size="4"
           />
 
-          <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px] mt-4">
+          <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px] mt-4 tracking-[-0.24px]">
             formal invitation to follow
           </H1>
         </div>
