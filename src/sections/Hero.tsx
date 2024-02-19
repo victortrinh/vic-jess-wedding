@@ -20,7 +20,7 @@ export const Hero = () => {
             SAVE THE DATE
           </SmallText>
 
-          <div className="flex gap-6 items-center justify-center">
+          <div className="flex gap-2 md:gap-4 lg:gap-6 items-center justify-center">
             <H1 className={textClasses}>
               Victor
             </H1>
