@@ -1,26 +1,88 @@
-import { H1 } from "@/components/Heading";
-import { Text } from "@/components/Text";
+"use client";
 
-export const Hero = () => (
-  <div className="h-[100svh] w-[100vw] py-12 container m-auto flex flex-col justify-between">
-    <Text>
-      The wedding of
-    </Text>
-    <div>
-      <H1>
-        Victor
-      </H1>
-      <H1>
-        & Jessica
-      </H1>
+import { H1 } from "@/components/Heading";
+import classNames from "classnames";
+import Image from "next/image";
+import { type PropsWithChildren, useEffect } from "react";
+
+export const Hero = () => {
+  const textClasses = "text-white text-[40px] md:text-[60px] lg:text-[110px]";
+
+  useEffect(() => {
+    import("add-to-calendar-button");
+  }, []);
+
+  return (
+    <div className="h-[100vh] w-[100vw] overflow-hidden relative">
+      <div className="absolute inset-0 bg-black opacity-80 z-10">
+        <div className="h-full w-full flex flex-col gap-10 items-center justify-center">
+          <SmallText>
+            SAVE THE DATE
+          </SmallText>
+
+          <div className="flex gap-6 items-center justify-center">
+            <H1 className={textClasses}>
+              Victor
+            </H1>
+            <H1 className={textClasses} variant="bacalisties">
+              and
+            </H1>
+            <H1 className={textClasses}>
+              Jessica
+            </H1>
+          </div>
+
+          <add-to-calendar-button
+            name="Victor and Jessica's Love Story"
+            description="Follow along as we Victor and Jessica embark on our journey to our happily ever after. Share special moments together with family and friends as we celebrate our union."
+            options="'Apple', 'Google', 'iCal', 'Microsoft365', 'MicrosoftTeams', 'Outlook.com'"
+            location="111 Newman Blvd, Lasalle, Quebec H8R 3E6"
+            startDate="2024-10-13"
+            timeZone="America/Toronto"
+            organizer="Victor and Jessica|victor.jessica.2024@outlook.com"
+            buttonStyle="3d"
+            listStyle="dropup-static"
+            hideBackground
+            hideCheckmark
+            size="4"
+          />
+
+          <div className="flex flex-col gap-2 items-center justify-center">
+            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
+              October 13, 2024
+            </SmallText>
+            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
+              RYE CROWN ROYAL
+            </SmallText>
+            <SmallText className="text-[14px] md:text-[28px] lg:text-[24px]">
+              MONTREAL, QC
+            </SmallText>
+          </div>
+
+          <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px]">
+            formal invitation to follow
+          </H1>
+        </div>
+      </div>
+      <Image
+        src="/hero.jpg"
+        fill
+        alt="Jess and Victor engagement"
+        style={{
+          objectFit: "cover",
+          objectPosition: "center"
+        }}
+      />
     </div>
-    <div>
-      <Text>
-        October 13,2024
-      </Text>
-      <Text>
-        Montreal, Quebec
-      </Text>
-    </div>
-  </div>
+  );
+};
+
+interface Props extends PropsWithChildren {
+  className?: string;
+}
+
+const SmallText = ({ children, className }: Props) => (
+  <p className={classNames("uppercase text-white text-[20px] md:text-[25px] lg:text-[30px] tracking-[12px]", className)}>
+    {children}
+  </p>
 );

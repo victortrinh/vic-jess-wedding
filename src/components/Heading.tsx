@@ -1,9 +1,8 @@
 import type { ReactNode } from "react";
-import { Merriweather } from "next/font/google";
 import localFont from "next/font/local";
 import classNames from "classnames";
 
-const merriWeather = Merriweather({ weight: ["300", "400", "700", "900"], subsets: ["latin"] });
+const bacalisties = localFont({ weight: "400", src: "../font/bacalisties.ttf", display: "swap" });
 
 const madam = localFont({
   weight: "400",
@@ -11,19 +10,26 @@ const madam = localFont({
   display: "swap"
 });
 
+const amalfi = localFont({
+  weight: "400",
+  src: "../font/amalfi.ttf",
+  display: "swap"
+});
+
 interface Props {
   children: ReactNode;
   className?: string;
+  variant?: "bacalisties" | "madam" | "amalfi";
 }
 
-export const H1 = ({ children, className }: Props) => (
-  <h1 className={classNames("text-[92px] font-[400] tracking-[2.76px] uppercase leading-none", madam.className, className)}>
+export const H1 = ({ children, className, variant = "madam" }: Props) => (
+  <h1 className={classNames("font-[400] tracking-[2.76px] leading-none", className, {
+    [bacalisties.className]: variant === "bacalisties",
+    [madam.className]: variant === "madam",
+    "tracking-[12px]": variant === "madam",
+    [amalfi.className]: variant === "amalfi"
+  })}
+  >
     {children}
   </h1>
-);
-
-export const H2 = ({ children, className }: Props) => (
-  <h2 className={classNames("text-[32px] leading-[42px] font-light tracking-[-0.96px]", merriWeather.className, className)}>
-    {children}
-  </h2>
 );
