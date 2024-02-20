@@ -11,7 +11,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Victor and Jessica's Love Story",
     description: " Follow along as Victor and Jessica embark on their journey to happily ever after. Learn more about their love story, wedding details, and special moments shared with family and friends as they celebrate their union.",
-    images: ["/jess-vic.jpg"]
+    images: ["/jess-vic.jpg"],
+    url: "https://vicandjess.love",
+    siteName: "Victor and Jessica's Love Story",
+    locale: "en_US",
+    type: "website"
   }
 };
 
@@ -21,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={lusitana.className}>
+    <html lang="en" className="w-[100vw] h-[100vh]">
+      <body className={`${lusitana.className} w-full h-full`}>
         {children}
       </body>
     </html>

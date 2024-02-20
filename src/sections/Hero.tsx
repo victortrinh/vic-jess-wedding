@@ -13,63 +13,50 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="h-[100vh] w-[100vw] overflow-hidden relative">
-      <div className="absolute inset-0 bg-black opacity-80 z-10">
-        <div className="h-full w-full flex flex-col gap-10 items-center justify-center">
-          <SmallText>
-            SAVE THE DATE
-          </SmallText>
+    <div className="h-full w-full relative overflow-hidden">
+      <div className="absolute inset-0 w-[100vw] h-[100vh] flex flex-col flex-wrap py-4 overflow-auto text-center gap-10 items-center justify-center z-20">
+        <SmallText>
+          SAVE THE DATE
+        </SmallText>
 
-          <div className="flex flex-col items-center justify-center">
-            <H1 className={`${textClasses} tracking-[6px]`}>
-              Victor Trinh
-            </H1>
-            <H1 className={`${textClasses} mt-[-12px] lg:mt-[-32px]`} variant="bacalisties">
-              and
-            </H1>
-            <H1 className={`${textClasses} mt-[-2px] lg:mt-[-10px] tracking-[6px]`}>
-              Jessica Li
-            </H1>
-          </div>
-
-          {/* <div className="flex gap-2 md:gap-4 lg:gap-6 items-center justify-center">
-            <H1 className={textClasses}>
-              Victor
-            </H1>
-            <H1 className={textClasses} variant="bacalisties">
-              and
-            </H1>
-            <H1 className={textClasses}>
-              Jessica
-            </H1>
-          </div> */}
-
-          <div className="flex flex-col gap-2 items-center justify-center">
-            <SmallText>
-              October 13, 2024
-            </SmallText>
-          </div>
-
-          <add-to-calendar-button
-            name="Victor and Jessica's Love Story"
-            description="Follow along as we Victor and Jessica embark on our journey to our happily ever after. Share special moments together with family and friends as we celebrate our union."
-            options="'Apple', 'Google', 'iCal', 'Microsoft365', 'MicrosoftTeams', 'Outlook.com'"
-            location="111 Newman Blvd, Lasalle, Quebec H8R 3E6"
-            startDate="2024-10-13"
-            timeZone="America/Toronto"
-            organizer="Victor and Jessica|victor.jessica.2024@outlook.com"
-            buttonStyle="3d"
-            listStyle="dropup-static"
-            hideBackground
-            hideCheckmark
-            size="4"
-          />
-
-          <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px] mt-4 tracking-[-0.24px]">
-            formal invitation to follow
+        <div className="flex flex-col items-center justify-center">
+          <H1 className={`${textClasses} tracking-[6px]`}>
+            Victor Trinh
+          </H1>
+          <H1 className={`${textClasses} mt-[-12px] lg:mt-[-32px]`} variant="bacalisties">
+            and
+          </H1>
+          <H1 className={`${textClasses} mt-[-2px] lg:mt-[-10px] tracking-[6px]`}>
+            Jessica Li
           </H1>
         </div>
+
+        <SmallText>
+          October 13, 2024
+        </SmallText>
+
+        <add-to-calendar-button
+          name="Victor and Jessica's Love Story"
+          description="Follow along as we Victor and Jessica embark on our journey to our happily ever after. Share special moments together with family and friends as we celebrate our union."
+          options="'Apple', 'Google', 'iCal', 'Microsoft365', 'MicrosoftTeams', 'Outlook.com'"
+          location="111 Newman Blvd, Lasalle, Quebec H8R 3E6"
+          startDate="2024-10-13"
+          timeZone="America/Toronto"
+          organizer="Victor and Jessica|victor.jessica.2024@outlook.com"
+          buttonStyle="3d"
+          listStyle="dropup-static"
+          hideBackground
+          hideCheckmark
+          size="4"
+        />
+
+        <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px] mt-4 tracking-[-0.24px]">
+          formal invitation to follow
+        </H1>
       </div>
+
+      <div className="absolute inset-0 bg-black opacity-60 z-10" />
+
       <Image
         src="/hero.jpg"
         fill
