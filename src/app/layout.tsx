@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="w-[100vw] h-[100vh]">
+    <html lang="en" className="w-[100dvw] h-[100dvh]">
       <body className={`${lusitana.className} w-full h-full`}>
         {children}
       </body>

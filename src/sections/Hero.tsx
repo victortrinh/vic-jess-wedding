@@ -14,7 +14,7 @@ export const Hero = () => {
 
   return (
     <div className="h-full w-full relative overflow-hidden">
-      <div className="absolute inset-0 w-[100vw] h-[100vh] overflow-auto grid items-center justify-center z-20">
+      <div className="absolute inset-0 w-full h-full overflow-auto grid items-center justify-center z-20">
         <div className="grid gap-10 text-center py-12 container">
           <SmallText>
             SAVE THE DATE
