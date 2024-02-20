@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Victor and Jessica's Love Story",
     description: " Follow along as Victor and Jessica embark on their journey to happily ever after. Learn more about their love story, wedding details, and special moments shared with family and friends as they celebrate their union.",
-    images: ["/jess-vic.jpg"],
+    images: ["/vic-jess.jpg"],
     url: "https://vicandjess.love",
     siteName: "Victor and Jessica's Love Story",
     locale: "en_US",
