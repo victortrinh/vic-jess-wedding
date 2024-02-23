@@ -13,8 +13,8 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div id="home" className="min-h-[100vh] w-[100vw] relative overflow-hidden">
-      <div className="absolute inset-0 w-full h-full overflow-y-auto no-scrollbar grid items-center justify-center z-20">
+    <div id="home" className="min-h-[100vh] w-[100vw] relative">
+      <div className="absolute inset-0 w-full h-full grid items-center justify-center z-20">
         <div className="grid gap-10 text-center py-12 container">
           <SmallText>
             SAVE THE DATE
