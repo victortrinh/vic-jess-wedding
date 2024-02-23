@@ -1,11 +1,8 @@
 {
   "editor.tabSize": 2,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "never"
-  },
-  "editor.formatOnSave": false,
-  "javascript.format.enable": false,
-  "javascript.validate.enable": true,
-  "json.format.enable": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": [
+    "source.fixAll.eslint"
+  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"]
 }

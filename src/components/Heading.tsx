@@ -22,8 +22,8 @@ interface Props {
   variant?: "bacalisties" | "madam" | "amalfi";
 }
 
-export const H1 = ({ children, className, variant = "madam" }: Props) => (
-  <h1 className={classNames("font-[400] tracking-[2.76px] leading-none", className, {
+export const Heading = ({ children, className, variant = "madam" }: Props) => (
+  <div className={classNames("font-[400] tracking-[2.76px] leading-none", className, {
     [bacalisties.className]: variant === "bacalisties",
     [madam.className]: variant === "madam",
     "tracking-[12px]": variant === "madam",
@@ -31,5 +31,5 @@ export const H1 = ({ children, className, variant = "madam" }: Props) => (
   })}
   >
     {children}
-  </h1>
+  </div>
 );

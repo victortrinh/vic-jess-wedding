@@ -1,6 +1,6 @@
 "use client";
 
-import { H1 } from "@/components/Heading";
+import { Heading } from "@/components/Heading";
 import classNames from "classnames";
 import Image from "next/image";
 import { type PropsWithChildren, useEffect } from "react";
@@ -13,23 +13,23 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="h-full w-full relative overflow-hidden">
-      <div className="absolute inset-0 w-full h-full overflow-auto grid items-center justify-center z-20">
+    <div id="home" className="min-h-[100dvh] w-[100dvw] relative overflow-hidden">
+      <div className="absolute inset-0 w-full h-full overflow-y-auto no-scrollbar grid items-center justify-center z-20">
         <div className="grid gap-10 text-center py-12 container">
           <SmallText>
             SAVE THE DATE
           </SmallText>
 
           <div className="flex flex-col items-center justify-center">
-            <H1 className={`${textClasses} tracking-[6px]`}>
+            <Heading className={`${textClasses} tracking-[6px]`}>
               Victor Trinh
-            </H1>
-            <H1 className={`${textClasses} mt-[-12px] lg:mt-[-32px]`} variant="bacalisties">
+            </Heading>
+            <Heading className={`${textClasses} mt-[-12px] lg:mt-[-32px]`} variant="bacalisties">
               and
-            </H1>
-            <H1 className={`${textClasses} mt-[-2px] lg:mt-[-10px] tracking-[6px]`}>
+            </Heading>
+            <Heading className={`${textClasses} mt-[-2px] lg:mt-[-10px] tracking-[6px]`}>
               Jessica Li
-            </H1>
+            </Heading>
           </div>
 
           <SmallText>
@@ -53,9 +53,9 @@ export const Hero = () => {
             />
           </div>
 
-          <H1 variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px] mt-4 tracking-[-0.24px]">
+          <Heading variant="amalfi" className="text-white text-[14px] md:text-[28px] lg:text-[24px] mt-4 tracking-[-0.24px]">
             formal invitation to follow
-          </H1>
+          </Heading>
         </div>
       </div>
 

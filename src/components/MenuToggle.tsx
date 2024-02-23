@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const MenuToggle = ({ toggle }: Props) => (
-  <button type="button" onClick={toggle} className="absolute top-[30px] left-7 z-30">
+  <button type="button" onClick={toggle} className="fixed top-[42px] left-[40px] z-30">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{

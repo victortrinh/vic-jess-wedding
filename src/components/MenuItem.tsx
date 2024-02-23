@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Heading } from "./Heading";
 
 const variants = {
   open: {
@@ -17,15 +18,25 @@ const variants = {
   }
 };
 
+interface Props {
+  href: string;
+  text: string;
+  onClick: () => void;
+}
 
-export const MenuItem = () => {
+
+export const MenuItem = ({ href, text, onClick }: Props) => {
   return (
-    <motion.li
+    <motion.div
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      Test
-    </motion.li>
+      <a href={href} className="text-lg" onClick={onClick}>
+        <Heading variant="amalfi">
+          {text}
+        </Heading>
+      </a>
+    </motion.div>
   );
 };
