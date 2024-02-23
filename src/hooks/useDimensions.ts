@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useRef } from "react";
+import { type RefObject, useEffect, useRef } from "react";
 
 // Naive implementation - in reality would want to attach
 // a window or resize listener. Also use state/layoutEffect instead of ref/effect
@@ -9,8 +9,8 @@ export const useDimensions = (ref: RefObject<HTMLElement>) => {
 
   useEffect(() => {
     if (ref.current) {
-        dimensions.current.width = ref.current.offsetWidth;
-        dimensions.current.height = ref.current.offsetHeight;
+      dimensions.current.width = ref.current.offsetWidth;
+      dimensions.current.height = ref.current.offsetHeight;
     }
   }, []);
 

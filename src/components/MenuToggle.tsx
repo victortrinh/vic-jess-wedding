@@ -1,12 +1,12 @@
-import { SVGMotionProps, motion } from "framer-motion";
+import { motion, type SVGMotionProps } from "framer-motion";
 import * as React from "react";
 
 interface Props {
-    toggle: () => void;
+  toggle: () => void;
 }
 
 export const MenuToggle = ({ toggle }: Props) => (
-  <button onClick={toggle} className="absolute top-[30px] left-7 z-30">
+  <button type="button" onClick={toggle} className="absolute top-[30px] left-7 z-30">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
@@ -33,11 +33,11 @@ export const MenuToggle = ({ toggle }: Props) => (
 );
 
 const Path = (props: React.JSX.IntrinsicAttributes & SVGMotionProps<SVGPathElement> & React.RefAttributes<SVGPathElement>) => (
-    <motion.path
-      fill="transparent"
-      strokeWidth="3"
-      stroke="hsl(0, 0%, 18%)"
-      strokeLinecap="round"
-      {...props}
-    />
-  );
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="hsl(0, 0%, 18%)"
+    strokeLinecap="round"
+    {...props}
+  />
+);
